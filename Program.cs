@@ -31,8 +31,18 @@ namespace guessing_game
                     {
                         Console.WriteLine("nope... try again");
                         Console.WriteLine($"you've made {GuessCount} guesses");
-                        Console.WriteLine("What is your guess?");
-                        guess = int.Parse(Console.ReadLine());
+                        if (guess < SecretNumber)
+                        {
+                            Console.WriteLine($"{guess} is less than the Secret Number");
+                            Console.WriteLine("What is your guess?");
+                            guess = int.Parse(Console.ReadLine());
+                        }
+                        else if (guess > SecretNumber)
+                        {
+                            Console.WriteLine($"{guess} is greater than the Secret Number");
+                            Console.WriteLine("What is your guess?");
+                            guess = int.Parse(Console.ReadLine());
+                        }
                     };
                 }
             }
