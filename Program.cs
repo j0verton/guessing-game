@@ -29,8 +29,19 @@ namespace guessing_game
                 case 4:
                     GuessLimit = 99999999;
                     break;
+                default:
+                    GuessLimit = 1;
+                    Console.WriteLine("That wasn't an option...");
+                    break;
             }
-            Console.WriteLine($"You get {GuessLimit} guesses");
+            if (GuessLimit == 1)
+            {
+                Console.WriteLine($"You get {GuessLimit} guess");
+            }
+            else
+            {
+                Console.WriteLine($"You get {GuessLimit} guesses");
+            }
             Console.WriteLine("What is your guess?");
             int SecretNumber = new Random().Next(1, 101); ;
             int guess = int.Parse(Console.ReadLine());
