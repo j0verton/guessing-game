@@ -9,7 +9,7 @@ namespace guessing_game
             int GuessCount = 0;
             Console.WriteLine("Time to guess the secret number!");
             Console.WriteLine("What is your guess?");
-            int SecretNumber = 42;
+            int SecretNumber = new Random().Next(1, 101); ;
             int guess = int.Parse(Console.ReadLine());
             while (GuessCount < 4)
             {
@@ -25,6 +25,7 @@ namespace guessing_game
                     {
                         Console.WriteLine($"That was guess number {GuessCount}");
                         Console.WriteLine("You're out of guesses... too bad...");
+                        Console.WriteLine($"The number was {SecretNumber}");
                     }
                     else
                     {
