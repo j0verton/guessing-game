@@ -39,12 +39,19 @@ namespace guessing_game
         }
     }
 }
+//secert num = 1
+//write guess
+// guescount=0
+// guess= read
 
-// guescount=1
-// write guess
 // while !=secret && guesscount<3
-// Console guess
-// guess = ReadO
+// Console write guess
 // guescount ++
+//write guesscount of 4
+// guess = Read
 // }
-// if guessCount = 3
+
+// if guessCount = 3 or guess == sercret
+//write correct
+//else
+//write out of tries
